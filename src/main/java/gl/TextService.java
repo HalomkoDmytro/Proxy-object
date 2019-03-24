@@ -1,17 +1,9 @@
 package gl;
 
-public class TextService {
+public interface TextService {
+    public String staticText();
 
-    public String staticText() {
-        return "Some static text";
-    }
+    public String variable(String variable);
 
-    public String variable(String variable) {
-        return variable;
-    }
-
-    public String exception(String text) throws RuntimeException {
-        //TODO throw your custom exception
-        return text;
-    }
+    public String exception(String text) throws RuntimeException;
 }
